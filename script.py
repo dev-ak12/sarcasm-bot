@@ -27,4 +27,3 @@ if __name__ == "__main__":
             break
         response = generate_sarcastic_response(user_input)
         print(f"\nSarcastic AI:\n{response}\n")
-        #test
