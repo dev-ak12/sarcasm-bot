@@ -1,0 +1,23 @@
+# Node.js dependencies
+node_modules/
+.next/
+package-lock.json
+
+# Python dependencies
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables
+.env
+
+# Database files
+db.sqlite3
+
+# Django cache and migrations
+**/migrations/
+
+# Logs
+logs/
+*.log
