@@ -14,14 +14,15 @@ client = OpenAI()
 
 @api_view(['POST'])
 def chat(request):
-    user_message = request.data.get('message', '')
+    messages = request.data.get('messages', '')
 
     conversation_history = [
     {"role": "system", "content": f"You are a highly sarcastic and witty AI. Respond to the following statement with a humorous and sarcastic remark"}
     ]
 
-    userQuery = { "role": "user", "content": user_message }
-    conversation_history.append(userQuery)
+    # Not safe. Need to fix.
+
+    conversation_history.extend(messages)
     response = client.chat.completions.create(
     model="gpt-4o-mini",
     messages= conversation_history,
